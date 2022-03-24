@@ -1,0 +1,23 @@
+{
+  "name": "a03-bcoop2000",
+  "version": "1.0.0",
+  "description": "make API for coin flip functions",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js --port=5555"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2022-spring/a03-bcoop2000.git"
+  },
+  "author": "Brian Cooper",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-spring/a03-bcoop2000/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-spring/a03-bcoop2000#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "yargs": "^17.4.0"
+  }
+}
