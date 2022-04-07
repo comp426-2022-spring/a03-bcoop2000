@@ -2,8 +2,7 @@ const express = require('express')
 const app = express()
 
 // get command line args
-import minimist from 'minimist';
-const args = minimist(process.argv.slice(2));
+const args = require('minimist')(process.argv.slice(2));
 
 // could be command line argument...
 const port = args.port || process.env.PORT || 5000
@@ -57,3 +56,9 @@ function flipACoin(call) {
   }
   return "{ call: " + call + ", flip: " + flipped + ", result: " + result + " }";
 }
+
+
+app.use(function (req, res) {
+  res.status(404).end('404 NOT FOUND')
+  res.type("text/plain")
+});
