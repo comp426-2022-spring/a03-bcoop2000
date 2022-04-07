@@ -57,7 +57,23 @@ function flipACoin(call) {
   return "{ call: " + call + ", flip: " + flipped + ", result: " + result + " }";
 }
 
+// initial app status
+app.get('/app', (req, res) => {
+  res.status(200).end('OK')
+  res.type('text/plain')
+})
 
+// endpoint for flip
+
+// endpoint for flips/:number
+
+// endpoint for call/heads
+
+// endpoint for call/tails
+
+
+
+// non-existent endpoint handling
 app.use(function (req, res) {
   res.status(404).end('404 NOT FOUND')
   res.type("text/plain")
