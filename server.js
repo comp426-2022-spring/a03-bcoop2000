@@ -54,7 +54,7 @@ function flipACoin(call) {
   if (flipped == call) {
     result = "win";
   }
-  return "{ call: " + call + ", flip: " + flipped + ", result: " + result + " }";
+  return { call: call, flip: flipped, result: result };
 }
 
 // initial app status
