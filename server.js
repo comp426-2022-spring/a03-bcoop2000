@@ -64,13 +64,30 @@ app.get('/app', (req, res) => {
 })
 
 // endpoint for flip
+app.get('/app/flip', (req, res) => {
+  res.status(200).json({ 'flip': coinFlip() })
+  res.type('application/json')
+});
 
 // endpoint for flips/:number
+app.get('/app/flips/:number', (req, res) => {
+  const raw = coinFlips(req.params.number)
+  const summary = countFlips(raw)
+  res.status(200).json({ 'raw': raw, 'summary': summary })
+  res.type('application/json')
+});
 
 // endpoint for call/heads
+app.get('/app/flip/call/heads', (req, res) => {
+  res.status(200).json(flipACoin('heads'))
+  res.type('application/json')
+});
 
 // endpoint for call/tails
-
+app.get('/app/flip/call/tails', (req, res) => {
+  res.status(200).json(flipACoin('tails'))
+  res.type('application/json')
+});
 
 
 // non-existent endpoint handling
